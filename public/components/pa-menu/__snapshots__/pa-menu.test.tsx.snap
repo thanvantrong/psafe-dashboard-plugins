@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaMenu tests should render a PaMenu 1`] = `
+<PaMenu
+  windowSize={
+    Object {
+      "height": 768,
+      "width": 1024,
+    }
+  }
+/>
+`;

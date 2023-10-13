@@ -1,0 +1,76 @@
+/*
+ * Psafe app - React component for show configuration of vulnerabilities - general tab.
+ * Copyright (C) 2015-2022 Psafe, Inc.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * Find more information about this on the LICENSE file.
+ */
+
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+
+import PaConfigurationSettingsTabSelector from '../util-components/configuration-settings-tab-selector';
+import PaConfigurationSettingsGroup from '../util-components/configuration-settings-group';
+import PaNoConfig from '../util-components/no-config';
+import { isString } from '../utils/utils';
+import helpLinks from './help-links';
+import { renderValueYesThenEnabled } from '../utils/utils';
+
+const mainSettings = [
+  { field: 'enabled', label: 'Vulnerability detector status', render: renderValueYesThenEnabled },
+  { field: 'interval', label: 'Interval between scan executions' },
+  { field: 'run_on_start', label: 'Scan on start' },
+  {
+    field: 'ignore_time',
+    label: 'Time to ignore already detected vulnerabilities'
+  }
+];
+
+class PaConfigurationVulnerabilitiesGeneral extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    const { currentConfig, wodleConfig } = this.props;
+    return (
+      <Fragment>
+        {currentConfig['wmodules-wmodules'] &&
+          isString(currentConfig['wmodules-wmodules']) && (
+            <PaNoConfig
+              error={currentConfig['wmodules-wmodules']}
+              help={helpLinks}
+            />
+          )}
+        {currentConfig &&
+          !wodleConfig['vulnerability-detector'] &&
+          !isString(currentConfig['wmodules-wmodules']) && (
+            <PaNoConfig error="not-present" help={helpLinks} />
+          )}
+        {wodleConfig['vulnerability-detector'] && (
+          <PaConfigurationSettingsTabSelector
+            title="Main settings"
+            description="General settings applied to the vulnerability detector and its providers"
+            currentConfig={wodleConfig}
+            minusHeight={320}
+            helpLinks={helpLinks}
+          >
+            <PaConfigurationSettingsGroup
+              config={wodleConfig['vulnerability-detector']}
+              items={mainSettings}
+            />
+          </PaConfigurationSettingsTabSelector>
+        )}
+      </Fragment>
+    );
+  }
+}
+
+PaConfigurationVulnerabilitiesGeneral.propTypes = {
+  currentConfig: PropTypes.object.isRequired
+};
+
+export default PaConfigurationVulnerabilitiesGeneral;

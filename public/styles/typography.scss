@@ -1,0 +1,186 @@
+/*
+ * Psafe app - Text & typography stylesheet
+ * Copyright (C) 2015-2022 Psafe, Inc.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * Find more information about this on the LICENSE file.
+ */
+
+/* -------------------------------------------------------------------------- */
+/* ------------------- Psafe text & typography stylesheet ------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* Apply the Open Sans font in the whole app */
+html,
+body,
+button:not(.fa):not(.fa-times),
+textarea,
+input,
+select{
+  //font-size: 14px;
+}
+
+.pa-headline-title:not(.pa-dev-title) {
+  padding: 8px!important;
+  justify-content: start!important;
+  font-size: 12px;
+}
+
+/* Override font size of md-headline class */
+.pa-headline {
+  font-size: 16px !important;
+}
+
+.color-grey {
+  color: grey !important;
+}
+
+.color-f9 {
+  color: #ff9999;
+}
+
+.pa-color-orange {
+  color: #f39c12 !important;
+}
+
+.color-pointer {
+  color: #006bb4 !important;
+}
+
+.pa-line-height {
+  line-height: 20px !important;
+}
+
+.pa-line-height-40 {
+  line-height: 40px !important;
+}
+
+.pa-text-center {
+  text-align: center;
+}
+
+.pa-text-right {
+  text-align: right;
+}
+
+.pa-text-left {
+  text-align: left;
+}
+
+.pa-text-bold {
+  font-weight: bold !important;
+}
+
+.pa-text-monospace {
+  font-family: monospace !important;
+}
+
+.pa-text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.pa-text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.pa-text-normal {
+  text-transform: none !important;
+}
+
+.pa-text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pa-text-truncatable {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  &:before {
+    content: attr(data-name);
+  }
+}
+
+.pa-text-truncatable-container {
+  overflow: hidden;
+  width: auto;
+  display: grid;
+}
+
+.font-size-12 {
+  font-size: 12px !important;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-25 {
+  font-size: 25px;
+}
+
+/* JSON viewer font colors */
+
+.json-key {
+  color: rgb(255, 100, 92);
+}
+
+.json-value {
+  color: rgb(0, 121, 165);
+}
+
+.json-string {
+  color: rgb(0, 166, 155);
+}
+
+/* Class for linkable text elements */
+.pa-text-link {
+  cursor: pointer !important;
+  color: #006bb4 !important;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+.pa-text-link-add {
+  cursor: pointer !important;
+  color: #006bb4 !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.pa-text-active {
+  color: rgb(0, 121, 165);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Special fix for text in navbars */
+
+.md-button {
+  text-transform: none !important;
+}
+
+.pa-text-teal {
+  color: rgb(0, 166, 155);
+}
+
+.pa-text-red {
+  color: rgb(255, 100, 92);
+}
+
+b {
+  font-weight: bold;
+}

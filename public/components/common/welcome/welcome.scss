@@ -1,0 +1,44 @@
+.pa-welcome-page .euiCard .euiTitle, .pa-module-body .euiCard .euiTitle {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.pa-welcome-page .euiCard .euiText, .pa-module-body .euiCard .euiText {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.pa-module-header-agent:not(.pa-module-header-agent-main){
+   background: white;
+   border-bottom: 1px solid #D3DAE6;
+}
+
+.pa-welcome-page-agent-info.pa-welcome-page-agent-info-gray{
+    border-top: 1px solid #d3dae6;
+    background: #fafbfd!important;
+    border-bottom: 1px solid #d3dae6;
+}
+
+.pa-welcome-page-agent-tabs{
+    padding: 12px 16px 1px 10px;
+    min-height: 54px;
+    border-bottom: 1px solid #D3DAE6;
+    background-color: white;
+}
+
+.pa-welcome-page-agent-info-actions{
+    padding: 6px 0px 6px 0px;
+}
+
+.pa-welcome-page-agent-info .euiStat .euiText{
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.statWithLink:hover .euiTitle {
+    text-decoration: underline;
+}
+
+span.statWithLink:hover  {
+    text-decoration: underline;
+}

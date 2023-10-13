@@ -1,0 +1,246 @@
+/*
+ * Psafe app - Top nav bar stylesheet
+ * Copyright (C) 2015-2022 Psafe, Inc.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * Find more information about this on the LICENSE file.
+ */
+
+/* -------------------------------------------------------------------------- */
+/* ---------------------- Psafe top nav bar stylesheet ---------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* Style to the base toolbar */
+/* Style applied to the toolbar-tools container */
+pa-menu {
+    z-index: 999;
+}
+.pa-menu {
+    margin-right: 1px;
+    background-color: #FFF;
+    margin-top: 0;
+    box-shadow: 0 2px 2px -1px rgba(152, 162, 179, 0.3);
+    border-bottom: 1px solid #d3dae6;
+    font-size: 14px;
+    position: relative !important;
+}
+
+.pa-menu a:focus{
+    text-decoration: none;
+}
+
+.pa-menu-wrapper{
+    display: flex;
+}
+
+.pa-menu-left-side{
+    width: 200px;
+    background: #f5f7fa;
+    padding: 0 16px;
+    border-right: 1px solid #d3dae6;
+}
+
+.pa-menu-left-side .euiButtonEmpty {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 0px 0px 0px 12px;
+}
+
+.pa-menu-left-side .euiButtonEmpty__content {
+    justify-content: left;
+}
+
+.pa-menu-left-side .euiButtonEmpty__text {
+    width: 100%;
+    text-align: left;
+    display: contents;
+}
+
+.pa-menu-sections {
+    margin: 0px -16px 0px -16px;
+    padding: 16px 0;
+    position: relative;
+    min-height: 300px;
+    background: #fafbfd;
+}
+
+
+
+.pa-menu-right-side{
+    padding: 0;
+    max-width: 700px;
+}
+
+.navBarLogo {
+    width: 100px;
+  }
+
+.pa-menu-popover{
+    position: fixed;
+    top: 105px !important;
+    left: 96px !important;
+    border-radius: 0px 0px 4px 0px;
+    max-height: unset!important;
+    border-right: none!important;
+}
+
+.pa-menu-popover-over .euiPopover__panelArrow.euiPopover__panelArrow--bottom:after {
+    border-bottom: 12px solid #fafbfd!important;
+}
+
+.pa-menu-popover-under .euiPopover__panelArrow.euiPopover__panelArrow--bottom:after,
+.pa-menu-popover-under .euiPopover__panelArrow.euiPopover__panelArrow--bottom:before {
+    display: none;
+}
+
+.pa-menu-popover.pa-menu-popover-over{
+    z-index: 3000!important;
+}
+
+.pa-menu-popover.pa-menu-popover-under{
+    z-index: 8!important;
+}
+
+.pa-menu-overview {
+    min-width: 716px;
+}
+
+@media only screen and (max-width: 767px){
+
+    .pa-menu-overview {
+        min-width: auto;
+    }
+
+    .pa-menu-select{
+        max-width: 20px !important;
+    }
+    .pa-menu-wrapper{
+        padding-left: 0!important;
+    }
+    .pa-menu-popover {
+        left: -1px !important;
+        width: 100vw;
+        box-shadow: none;
+        max-width: unset;
+    }
+    .pa-menu-left-side{
+        width: 70px;
+    }
+    .pa-menu-left-side .euiButtonEmpty {
+        width: 50px;
+    }
+    .pa-menu-right-side{
+        overflow-y: auto;
+        max-height: 320px;
+        margin-right: -16px;
+    }
+    .euiFormRow + .euiFormRow {
+        margin-left: 16px;
+        margin-top: 0;
+    }
+    .pa-menu-select {
+        max-width: 150px!important;
+        width: 150px!important;
+    }
+    .euiSideNav__mobileToggle.euiLink{
+        display: none;
+    }
+    .euiSideNav__content{
+        visibility: visible;
+        opacity: 1;
+        max-height: unset;
+        margin: 0;
+    }
+    .pa-menu-button-title {
+        display: none;
+    }
+  }
+
+    md-toolbar .bsTooltip-inner{
+        padding: 8px 3px;
+      }
+
+    md-toolbar .md-button {
+        margin: 0px 8px 0px 0px!important;
+      }
+
+.pa-menu-logo {
+    filter: hue-rotate(30deg) brightness(0.8);
+    margin-top: 4px;
+  }
+
+.pa-menu-button {
+    font-size: 14px !important;
+    transition: none !important;
+    min-height: 38px !important;
+    line-height: 38px !important;
+    height: 38px;
+    margin-right: 8px;
+    min-width: 45px!important;
+    font-weight: 400;
+}
+
+.pa-menu-button .euiButtonEmpty__content .euiButtonEmpty__content {
+    padding-right: 0;
+}
+
+.pa-menu-button.md-icon-button {
+    line-height: 24px !important;
+}
+.md-icon-button.md-icon-button-back {
+    border: 1px solid #d9d9d9!important;
+    border-radius: 5px!important;
+    margin-left: 0!important;
+}
+
+/* Style to mark active or when-hover buttons on the toolbar */
+.pa-menu-button.pa-menu-active{
+    background-color: #e7eaf1!important;
+}
+.pa-menu-button:not([disabled]):hover {
+    background-color: #f5f7fa;
+    text-decoration: none;
+}
+
+/* Style for index-pattern selector */
+.pa-menu-select {
+    cursor: pointer;
+    padding: 8px;
+    background: white;
+    border: 1px solid #d3dae6;
+    width: 100%;
+    max-width: 100%;
+}
+
+.pa-menu-select option {
+    color: #373a42;
+    background-color: #FFF;
+}
+
+/* Style for index-pattern selector options */
+.pa-menu-select-option {
+    color: #373a42;
+    background-color: #FFF;
+}
+
+.euiHeader {
+    box-shadow: none !important;
+}
+
+.pa-menu-button .euiIcon--medium {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 6px;
+}
+
+.PaManagementSideMenu{
+    padding: 16px;
+}
+
+.PaManagementSideMenu span {
+    font-size: 14px!important;
+}

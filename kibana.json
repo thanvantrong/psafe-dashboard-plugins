@@ -1,0 +1,33 @@
+{
+  "id": "psafe",
+  "version": "4.3.10-4311",
+  "kibanaVersion": "kibana",
+  "configPath": [
+    "psafe"
+  ],
+  "requiredPlugins": [
+    "navigation",
+    "data",
+    "discover",
+    "inspector",
+    "visualizations",
+    "kibanaLegacy",
+    "uiActions",
+    "charts",
+    "savedObjects",
+    "kibanaReact",
+    "kibanaUtils"
+  ],
+  "optionalPlugins": [
+    "security",
+    "opendistroSecurityKibana",
+    "searchguard",
+    "spaces",
+    "telemetry"
+  ],
+  "server": true,
+  "ui": true,
+  "owner": {
+    "name": "Psafe, Inc"
+  }
+}

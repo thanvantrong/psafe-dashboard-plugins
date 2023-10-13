@@ -1,0 +1,141 @@
+.pa-module {
+    display: contents;
+}
+
+.pa-module-header-agent-wrapper, .pa-module-header-nav-wrapper{
+    width: 100%;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+}
+
+.pa-module-header-agent, .pa-module-header-nav{
+    background:#fafbfd;
+}
+
+.pa-module-header-agent{
+    height: 50px;
+    padding: 16px;
+}
+
+.pa-module-header-agent .euiHealth svg{
+    width: 16px;
+    height: 24px;
+}
+
+.paApp .euiFlyoutBody .euiFlyoutBody__overflowContent{
+    padding:0!important;
+}
+
+.pa-module-header-nav > .euiFlexGroup {
+    margin-top: -16px;
+}
+
+.pa-module-header-nav > .euiFlexGroup .euiFlexItem{
+    margin-top: 0px;
+}
+
+.pa-module-header-agent-title{    
+    margin: 6px 12px!important;
+}
+
+.pa-module-header-agent-title-badge{
+    border: 1px solid #d3dae6;
+    padding: 0 100px;
+    border-radius: 100px;
+}
+
+.pa-module-header-agent-title-btn{
+    cursor: pointer;
+}
+
+.pa-module-header-agent-title-btn > span:hover{
+    color: #006BB4;
+}
+
+.pa-module-header-agent h1{    
+    font-weight: 400;
+}
+
+.pa-module-header-agent h1 b{    
+    font-weight: 500;
+}
+
+.pa-module-header-nav-wrapper{
+    margin-top: 49px;    
+}
+
+.pa-module-header-nav .euiTabs{
+    padding-top: 6px;
+}
+
+.pa-module-header-nav .euiTab__content{
+    font-size: 16px!important;
+    font-weight: 400;
+}
+
+.pa-module-body {
+    padding-top: 105px;
+}
+
+.pa-module.pa-module-welcome .pa-module-body{
+    padding-top: 109px !important;
+}
+
+.pa-module.pa-module-showing-agent .pa-module-body{
+    padding-top: 160px !important;
+}
+
+.flyout-body .globalQueryBar{
+    padding: 2px 0px 8px 0px!important;
+}
+
+.pa-module-body-main {
+    padding-top: 50px!important;
+}
+
+.pa-module-body-main-double {
+    padding-top: 102px!important;
+}
+
+.sidebar-list{
+    margin-bottom: 2px;
+}
+
+discover-app-w .sidebar-container {
+    background-color: transparent!important;
+}
+
+@media only screen and (max-width: 1360px){
+    .pa-module.pa-module-welcome .pa-module-body{
+        padding-top: 189px !important;
+    }
+    @media only screen and (max-width: 767px){
+        .pa-module-header-agent h1{    
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    
+        .pa-module-body {
+            margin-top: -160px;
+        }
+    
+        .pa-module-header-agent-wrapper, .pa-module-header-nav-wrapper{
+            position: relative;
+            padding-left: 0px;
+        }
+    
+        .pa-module-header-nav-wrapper{
+            margin-top: 15px;
+        }
+    
+        .pa-module-header-nav {
+            padding-bottom: 16px;
+        }
+    
+        .pa-module-body-agent-info > .euiFlexGroup > .euiFlexItem {
+            max-width: unset!important;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "esModuleInterop": true,
+    "outDir": "./target",
+    "allowUnusedLabels": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "skipLibCheck": true,
+    "alwaysStrict": false,
+    "noImplicitUseStrict": false,
+    "noImplicitAny": false,
+  },
+  "include": [
+    "index.ts",
+    "server/**/*",
+    "public/**/*",
+    "common/**/*"
+  ],
+  "exclude": [
+    "public/**/*.test.ts",
+    "public/**/*.test.tsx",
+    "server/**/*.test.ts",
+    "common/**/*.test.ts",
+    "../../src/**/*",
+    "**/request.ts",
+    "src/**/*"
+  ],
+}
